@@ -1,12 +1,16 @@
 import React from 'react'
 import "./animate.css";
+import { Anton, Poppins } from "next/font/google";
+
+const anton = Anton({ subsets: ['latin'], weight: "400" });
+const poppins = Poppins({ subsets: ['latin'], weight: "400" });
 
 const Timeline = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center pt-10 w-full bg-[#006076] text-center px-4">
         
-        <h1 className="text-6xl md:text-8xl text-[#EE9B01] text-shadow-retro-yellowww font-bold mb-15">
+        <h1 className={`${anton.className} text-6xl md:text-8xl text-[#EE9B01] text-shadow-retro-yellowww font-bold mb-15`}>
           TIMELINE
         </h1>
 
