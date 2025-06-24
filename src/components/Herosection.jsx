@@ -52,12 +52,12 @@ const Herosection = () => {
       </header>
 
       {/* HERO SECTION */}
-      <div className="flex min-h-screen justify-around pb-20">
-        {/* LEFT TEXT */}
+      <div className="flex min-h-screen justify-around pb-15">
+        {/* LEFT TEXT */} 
         <div className="min-h-full mb-10 flex flex-col justify-center">
-          <h1 className={`${anton.className} text-8xl text-shadow-retro-red text-[#E72E0A]`}>CODE</h1>
-          <h1 className={`${anton.className} text-8xl text-shadow-retro-red text-[#E72E0A]`}>ARCADE</h1>
-          <h1 className={`${anton.className} text-8xl text-shadow-retro-yellow text-[#EE9B01]`}>HACKATHON</h1>
+          <h1 className={`${anton.className} text-7xl 2xl:text-8xl text-shadow-retro-red text-[#E72E0A]`}>CODE</h1>
+          <h1 className={`${anton.className} text-7xl 2xl:text-8xl text-shadow-retro-red text-[#E72E0A]`}>ARCADE</h1>
+          <h1 className={`${anton.className} text-7xl 2xl:text-8xl text-shadow-retro-yellow text-[#EE9B01]`}>HACKATHON</h1>
 
           <p className={`${poppins.className} w-100 mt-5 font-sans font-bold`}>
             A thrilling state-level hackathon bringing together bright minds to innovate,
@@ -79,13 +79,13 @@ const Herosection = () => {
           {mounted && (
             <>
               <img src="./flyes.svg" className="floating-svg top-20 z-1 w-50 -left-35 absolute" alt="Flying" />
-              <img src="./final ghost.svg" className="floating-svg z-1 bottom-10 w-25 right-0 absolute" alt="Ghost" />
+              <img src="./final ghost.svg" className="floating-svg z-1 bottom-20 w-25 right-0 absolute" alt="Ghost" />
             </>
           )}
           <img src="./finaltrophy.svg" className="scale-120 z-0" alt="Trophy"/>
         </div>
 
-        <section className="absolute -rotate-3 -left-4 bottom-8 w-screen bg-[#EE9B01] h-10 overflow-hidden">
+        <section className="absolute -rotate-3 -left-4 bottom-5 w-screen bg-[#EE9B01] h-10 overflow-hidden">
           <div className="relative flex w-[200%] animate-marquee">
             <div className={`${anton.className} text-[#AF2012] flex whitespace-nowrap text-2xl text-center items-center px-4`}>
               · Insert brain. press start. hack · Insert brain. press start. hack · Insert brain. press start. hack · Insert brain. press start. hack
