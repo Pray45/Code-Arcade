@@ -15,19 +15,14 @@
   box-shadow: 4px 4px 0 #a2916d;
 }
 
-.animate-tilt {
-  animation: tilt 5s ease-in-out infinite;
-}
-
-
 .text-shadow-retro-red {
-  text-shadow: 8px 8px 0 #006b7c;
+  text-shadow: 0.1em 0.1em 0 #006b7c;
 }
 
 .text-shadow-retro-yellow {
-  text-shadow: 8px 8px 0 #006b7c;
+  text-shadow: 0.1em 0.1em 0 #006b7c;
 }
 
 .text-shadow-retro-yellowww {
-  text-shadow: 8px 8px 0 #004656;
+  text-shadow: 0.1em 0.1em 0 #004656;
 }
