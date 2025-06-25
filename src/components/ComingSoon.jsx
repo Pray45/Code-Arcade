@@ -70,7 +70,7 @@ const ComingSoon = () => {
 
       {/* MAIN CONTENT */}
       <div className='md:w-1/2 flex flex-col justify-center items-center'>
-        <h1 className={`text-[#EE9B01] text-6xl md:text-7xl 2xl:text-[150px] ${anton.className} text-shadow-retro-yellow`} >COMING SOON</h1>
+        <h1 className={`mt-20 text-[#EE9B01] text-6xl md:text-7xl 2xl:text-[150px] ${anton.className} text-shadow-retro-yellow`} >COMING SOON</h1>
 
         <p className={`text-[10px] mt-4 2xl:text-2xl md:text-xs md:mt-2 text-center ${poppins.className}`}>Get ready to enter the digital battlefield where code meets creativity.</p>
         <p className={`text-[10px] 2xl:text-2xl md:text-xs text-center ${poppins.className}`}>The most electrifying hackathon of 2025 is loading...</p>
