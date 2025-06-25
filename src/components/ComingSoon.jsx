@@ -39,7 +39,7 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <div className='min-h-screen flex flex-col items-center justify-between'>
+    <div className='flex flex-col items-center justify-between'>
       {/* NAVBAR */}
       <header className="flex min-w-screen bg-[#EBD6A7] py-1 2xl:py-5 md:py-2 text-[#053125]">
         <ul className="flex w-full justify-center items-center 2xl:gap-20 md:gap-10 gap-3 ">
@@ -100,7 +100,7 @@ const ComingSoon = () => {
       </div>
 
       {/* FOOTER */}
-      <footer className='md:h-10 py-2 2xl:h-15 w-full bg-[#AF2012] self-end'>
+      <footer className='absolute bottom-0 md:h-10 py-2 2xl:h-15 w-full bg-[#AF2012] self-end'>
         <h1 className='text-center text-[11px] md:pt-2 2xl:pt-4 2xl:text-2xl'>© 2025 CodeArcade • Government Engineering College, Patan</h1>
       </footer>
     </div>
