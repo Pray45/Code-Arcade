@@ -26,3 +26,19 @@
 .text-shadow-retro-yellowww {
   text-shadow: 0.1em 0.1em 0 #004656;
 }
+
+.l-shape {
+  width: 40px;
+  height: 40px;
+  background-color: #679181;
+
+
+  clip-path: polygon(
+      100% 0%,     /* top right */
+      80% 50%,     /* middle left */
+      100% 100%,   /* bottom right */
+      90% 100%,    /* optional corner smoothing */
+      50% 50%,     /* sharp inside point */
+      90% 0%     /* Bottom-left */
+  );
+}
