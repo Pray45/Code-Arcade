@@ -69,7 +69,7 @@ const ComingSoon = () => {
             COMING SOON
           </h1>
 
-          <p className={`${poppins.className} text-white text-xs md:w-150 2xl:w-250 md:text-sm 2xl:text-2xl text-center mt-4`}>
+          <p className={`${poppins.className} text-white md:w-150 2xl:w-250 md:text-sm 2xl:text-2xl text-center mt-4`}>
             Get ready to enter the digital battlefield where code meets creativity.The most electrifying hackathon of 2025 is loading...
           </p>
         </div>
@@ -112,7 +112,7 @@ const ComingSoon = () => {
 
       {/* FOOTER */}
       <footer className='bg-[#AF2012] py-3 text-center text-[11px] md:text-base 2xl:text-xl'>
-        <h1>© 2025 CodeArcade • Government Engineering College, Patan</h1>
+        <h1 className={`text-white text-md ${poppinsBold.className}`}>© 2025 CodeArcade • Government Engineering College, Patan</h1>
       </footer>
     </div>
   );
