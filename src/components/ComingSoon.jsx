@@ -13,7 +13,6 @@ const ComingSoon = () => {
     seconds: 0,
   });
 
-  // SET YOUR LAUNCH DATE HERE
   const launchDate = new Date('2025-10-10T10:00:00');
 
   useEffect(() => {
@@ -39,69 +38,78 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <div className='flex flex-col items-center justify-between'>
+    <div className='h-screen vs:min-h-screen 2xl:min-h-dvh w-full flex flex-col'>
       {/* NAVBAR */}
-      <header className="flex min-w-screen bg-[#EBD6A7] py-1 2xl:py-5 md:py-2 text-[#053125]">
-        <ul className="flex w-full justify-center items-center 2xl:gap-20 md:gap-10 gap-3 ">
-          {/* LEFT NAV */}
-          <p className={` ${anton.className} text-[10px] md:text-2xl 2xl:text-4xl flex border-[#93A39A] text-[#E72E0A]
-            py-1 border-t-3  border-b-3
-            md:py-1.5 md:border-t-3 md:border-b-3
-            2xl:py-3 justify-around 2xl:border-t-5 2xl:border-b-5`}>
-            Insert Brain. Press Start. Hack. 
+      <header className="flex flex-wrap justify-center items-center h-auto px-4 py-2 bg-[#EBD6A7] text-[#053125]">
+        <div className='flex flex-wrap justify-center items-center gap-3 w-full max-w-7xl'>
+          <p className={`${anton.className} hidden text-xs md:text-xl 2xl:text-3xl border-y-[3px] border-[#93A39A] text-[#E72E0A] py-1`}>
+            Insert Brain. Press Start. Hack.
           </p>
 
-          {/* CENTER SHAPE */}
-          <div className="w-20 2xl:w-85 md:w-54 flex justify-center">
-            <div className={` ${anton.className} bg-[#E72E0A] h-8 2xl:h-18 md:h-14 w-full shadow-md flex text-white text-xs 2xl:text-5xl md:text-3xl justify-center items-center`} style={{ clipPath: "polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%, 10% 50%)" }}>
+          <div className="w-35 md:w-40 2xl:w-60 flex justify-center">
+            <div className={`${anton.className} bg-[#E72E0A] h-10 md:h-12 2xl:h-16 w-full shadow-md text-white text-xl md:text-2xl 2xl:text-4xl flex justify-center items-center`} style={{ clipPath: "polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%, 10% 50%)" }}>
               CODE ARCADE
             </div>
           </div>
 
-          {/* RIGHT NAV */}
-          <p className={` ${anton.className} text-[10px] md:text-2xl 2xl:text-4xl flex border-[#93A39A] text-[#E72E0A]
-            py-1 border-t-3  border-b-3
-            md:py-1.5 md:border-t-3 md:border-b-3
-            2xl:py-3 justify-around 2xl:border-t-5 2xl:border-b-5`}>
+          <p className={`${anton.className} hidden text-xs md:text-xl 2xl:text-3xl border-y-[3px] border-[#93A39A] text-[#E72E0A] py-1`}>
             Prepare For The Ultimate Battle
           </p>
-        </ul>
+        </div>
       </header>
 
       {/* MAIN CONTENT */}
-      <div className='md:w-1/2 flex flex-col justify-center items-center'>
-        <h1 className={`mt-20 text-[#EE9B01] text-6xl md:text-7xl 2xl:text-[150px] ${anton.className} text-shadow-retro-yellow`} >COMING SOON</h1>
+      <main className='flex-1 flex flex-col justify-around items-center vs:py-0 py-10 md:px-0 w-full'>
+        <div>
+          <h1 className={`${anton.className} text-[#EE9B01] text-center text-6xl vvs:text-7xl xl:text md:text-6xl 2xl:text-[200px] text-shadow-retro-yellow`}>
+            COMING SOON
+          </h1>
 
-        <p className={`text-[10px] mt-4 2xl:text-2xl md:text-xs md:mt-2 text-center ${poppins.className}`}>Get ready to enter the digital battlefield where code meets creativity.</p>
-        <p className={`text-[10px] 2xl:text-2xl md:text-xs text-center ${poppins.className}`}>The most electrifying hackathon of 2025 is loading...</p>
-
-        <h1 className={`text-[#E72E0A] md:mt-3 mt-15 mb-5 text-5xl 2xl:mt-15 md:text-5xl 2xl:text-8xl ${anton.className} text-shadow-retro-red`} >LAUNCHING IN</h1>
-
-        <section className='flex gap-2 md:gap-20 2xl:gap-30 md:mt-10 2xl:mt-20'>
-          {[
-            { label: "DAYS", value: timeLeft.days },
-            { label: "HOURS", value: timeLeft.hours },
-            { label: "MINUTES", value: timeLeft.minutes },
-            { label: "SECONDS", value: timeLeft.seconds }
-          ].map(({ label, value }, i) => (
-            <div key={i}>
-              <div className='bg-[#EBD6A7] text-black font-bold text-4xl 2xl:text-7xl flex justify-center items-center w-20 h-20 md:w-25 md:h-25 2xl:w-50 2xl:h-55 rounded'>
-                {String(value).padStart(2, '0')}
-              </div>
-              <h1 className={`2xl:text-5xl 2xl:mt-5 text-xl md:text-3xl text-center md:mt-3 mt-2 ${anton.className}`}>{label}</h1>
-            </div>
-          ))}
-        </section>
-
-        <div className='mx-2 mt-20 md:mx-0 md:w-160 2xl:w-290 w-full py-2 md:py-0 md:mt-5 2xl:mt-15 flex flex-col justify-center 2xl:h-30 md:h-20 bg-[#EBD6A7] '>
-          <p className={`text-black text-center text-[12px] 2xl:text-4xl md:text-xl ${anton.className}`}>Sharpen your skills, assemble your team, and get ready</p>
-          <p className={`text-black text-center text-[12px] 2xl:text-4xl md:text-xl ${anton.className}`}>to code your way to victory!</p> 
+          <p className={`${poppins.className} text-[10px] md:text-sm 2xl:text-2xl text-center mt-4`}>
+            Get ready to enter the digital battlefield where code meets creativity.
+          </p>
+          <p className={`${poppins.className} text-[10px] md:text-sm 2xl:text-2xl text-center`}>
+            The most electrifying hackathon of 2025 is loading...
+          </p>
         </div>
-      </div>
+
+        <div className='w-full mt-5 vs:mt-0'>
+          <h1 className={`${anton.className} text-[#E72E0A] text-5xl text-center md:text-5xl 2xl:text-8xl vs:mt-0 mt-10 text-shadow-retro-red`}>
+            LAUNCHING IN
+          </h1>
+
+          <section className='flex w-full flex-wrap items-center vs:justify-center justify-around px-2 vs:gap-2 md:gap-10 2xl:gap-16 mt-10 md:mt-10'>
+            {[
+              { label: "DAYS", value: timeLeft.days },
+              { label: "HOURS", value: timeLeft.hours },
+              { label: "MINUTES", value: timeLeft.minutes },
+              { label: "SECONDS", value: timeLeft.seconds }
+            ].map(({ label, value }, i) => (
+              <div key={i} className="flex flex-col items-center justify-center mb-10">
+                <div className={`${anton.className} bg-[#EBD6A7] text-black font-bold text-3xl md:text-5xl 2xl:text-7xl vvs:w-21 vvs:h-21 w-18 h-18 md:w-24 md:h-24 2xl:w-32 2xl:h-32 rounded flex items-center justify-center`}>
+                  {String(value).padStart(2, '0')}
+                </div>
+                <h1 className={`${anton.className} text-sm md:text-xl 2xl:text-4xl mt-2 md:mt-4`}>{label}</h1>
+              </div>
+            ))}
+          </section>
+        </div>
+
+        <div className='w-full px-2 vs:mb-0 vs:mt-0 mt-10 mb-10 flex justify-center'>
+          <div className='bg-[#EBD6A7] w-full max-w-3xl px-4 py-4 md:py-6 2xl:py-10 text-center'>
+            <p className={`${anton.className} text-xs md:text-lg 2xl:text-3xl text-black`}>
+              Sharpen your skills, assemble your team, and get ready
+            </p>
+            <p className={`${anton.className} text-xs md:text-lg 2xl:text-3xl text-black`}>
+              to code your way to victory!
+            </p>
+          </div>
+        </div>
+      </main>
 
       {/* FOOTER */}
-      <footer className='absolute bottom-0 md:h-10 py-2 2xl:h-15 w-full bg-[#AF2012] self-end'>
-        <h1 className='text-center text-[11px] md:pt-2 2xl:pt-4 2xl:text-2xl'>© 2025 CodeArcade • Government Engineering College, Patan</h1>
+      <footer className='bg-[#AF2012] py-3 text-center text-[11px] md:text-base 2xl:text-xl'>
+        <h1>© 2025 CodeArcade • Government Engineering College, Patan</h1>
       </footer>
     </div>
   );
