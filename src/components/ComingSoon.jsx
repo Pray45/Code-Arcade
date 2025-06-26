@@ -38,7 +38,7 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <div className='h-screen vs:min-h-screen 2xl:min-h-dvh w-full flex flex-col'>
+    <div className='min-h-[100dvh] vs:min-h-screen 2xl:min-h-dvh w-full flex flex-col'>
       {/* NAVBAR */}
       <header className="flex flex-wrap justify-center items-center h-auto px-4 py-2 bg-[#EBD6A7] text-[#053125]">
         <div className='flex flex-wrap justify-center items-center gap-3 w-full max-w-7xl'>
