@@ -1,3 +1,5 @@
+"use client"
+
 import FloatingEffect from "@/Pages/FloatingEffect";
 import Timeline from "@/Pages/Timeline";
 import Herosection from "@/Pages/Herosection";
