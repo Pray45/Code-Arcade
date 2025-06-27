@@ -11,7 +11,11 @@ module.exports = {
         '10xl': '10rem',   // 160px
         '11xl': '12rem',   // 192px
         '12xl': '14rem',   // 224px
-        // add more as needed
+      },
+       fontSize: {
+        '10xl': '10rem',
+        '11xl': '12rem',
+        '12xl': '14rem',
       },
     },
   },

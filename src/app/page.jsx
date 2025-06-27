@@ -1,7 +1,7 @@
-import FloatingEffect from "@/components/FloatingEffect";
-import Timeline from "@/components/Timeline";
-import Herosection from "@/components/Herosection";
-import ComingSoon from "@/components/ComingSoon";
+import FloatingEffect from "@/Pages/FloatingEffect";
+import Timeline from "@/Pages/Timeline";
+import Herosection from "@/Pages/Herosection";
+import ComingSoon from "@/Pages/ComingSoon";
 
 export default function Home() {
 
@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <div className="w-screen bg-[#329194]">
       <FloatingEffect />
-      <ComingSoon/>
-      {/* <Herosection/>
-      <Timeline /> */}
+      {/* <ComingSoon/> */}
+      <Herosection/>
+      {/* <Timeline /> */}
     </div>
   );
 }
