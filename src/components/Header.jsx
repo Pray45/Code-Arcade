@@ -1,6 +1,6 @@
 "use client"
 
-import { React, useState } from 'react';
+import { React, useState,useEffect   } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import "../Pages/animate.css"
 import "../app/globals.css";
@@ -12,7 +12,12 @@ const poppins = Poppins({ subsets: ['latin'], weight: "400" });
 const Header = () => {
 
     const [open, setOpen] = useState(false);
-    const menuItems = ['Home', 'Timeline', 'Instruction', 'Rewards', 'Sponsors', 'FAQs', 'About Us'];
+    const menuItems = ['Timeline', 'Instruction', 'Rewards', 'Sponsors', 'FAQs', 'About Us'];
+
+    useEffect(() => {
+      document.body.style.overflow = open ? 'hidden' : 'auto';
+      return () => (document.body.style.overflow = 'auto');
+    }, [open]);
 
 
   return (
@@ -78,7 +83,7 @@ const Header = () => {
         </div>
       </header>
 
-    <div className="lg:hidden z-50">
+    <div className="relative   lg:hidden z-50">
       {/* Hamburger / Close button */}
 
       {/* Full-screen Menu */}
@@ -89,14 +94,14 @@ const Header = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: '-100vh', opacity: 0 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="fixed top-0 left-0 w-full h-screen bg-[#AF2012] flex flex-col justify-center items-center gap-6 z-50"
+            className="fixed top-0 left-0 w-full min-h-full bg-[#AF2012] flex flex-col justify-center items-center gap-6 z-50"
           >
             {menuItems.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1, duration: 0.4 }}
+                transition={{ delay: 0.1 + index * 0.1, duration: 0.4 }}
                 className={`${anton.className} text-3xl text-white`}
               >
                 {item}
