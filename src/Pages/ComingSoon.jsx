@@ -1,6 +1,8 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import { Anton, Poppins } from "next/font/google";
+import { motion } from 'framer-motion';
 import "./animate.css"
 
 const anton = Anton({ subsets: ['latin'], weight: "400" });
@@ -48,13 +50,13 @@ const ComingSoon = () => {
             Insert Brain. Press Start. Hack.
           </p>
           <div className='mx-5 relative flex justify-center items-center'>
-            <div class="l-shape rotate-180 absolute -left-5 "></div>
+            <div className="l-shape rotate-180 absolute -left-5 "></div>
               <div className="w-35 md:w-40 2xl:w-60">
-                <divrelative className={`${anton.className} bg-[#E72E0A] h-10 md:h-12 2xl:h-16 w-full shadow-md text-white text-xl md:text-2xl 2xl:text-4xl flex justify-center items-center`} style={{ clipPath: "polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%, 10% 50%)" }}>
+                <div className={`${anton.className} bg-[#E72E0A] h-10 md:h-12 2xl:h-16 w-full shadow-md text-white text-xl md:text-2xl 2xl:text-4xl flex justify-center items-center`} style={{ clipPath: "polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%, 10% 50%)" }}>
                   CODE ARCADE
-                </divrelative >
+                </div >
               </div>
-            <div class=" -right-5 l-shape absolute"></div>
+            <div className=" -right-5 l-shape absolute"></div>
           </div>
           <p className={`${anton.className} hidden vs:flex text-xs md:text-xl 2xl:text-3xl border-y-[3px] border-[#93A39A] text-[#E72E0A] py-1`}>
             Prepare For The Ultimate Battle
@@ -65,9 +67,15 @@ const ComingSoon = () => {
       {/* MAIN CONTENT */}
       <main className='flex-1 flex flex-col justify-around items-center vs:py-0 py-10 md:px-0 w-full'>
         <div>
-          <h1 className={`${anton.className} text-[#EE9B01] text-center text-6xl vvs:text-7xl xl:text md:text-6xl 2xl:text-[200px] text-shadow-retro-yellow`}>
+          <motion.h1
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className={`${anton.className} text-[#EE9B01] text-center text-6xl vvs:text-7xl xl:text md:text-6xl 2xl:text-[200px] text-shadow-retro-yellow`}
+          >
             COMING SOON
-          </h1>
+          </motion.h1>
+
 
           <p className={`${poppins.className} text-white md:w-150 2xl:w-250 md:text-sm 2xl:text-2xl text-center mt-4`}>
             Get ready to enter the digital battlefield where code meets creativity.The most electrifying hackathon of 2025 is loading...
@@ -112,7 +120,7 @@ const ComingSoon = () => {
 
       {/* FOOTER */}
       <footer className='bg-[#AF2012] py-3 text-center text-[11px] md:text-base 2xl:text-xl'>
-        <h1 className={`text-white text-md ${poppinsBold.className}`}>© 2025 CodeArcade • Government Engineering College, Patan</h1>
+        <h1 className={`text-white text-md ${anton.className}`}>© 2025 CodeArcade • Government Engineering College, Patan</h1>
       </footer>
     </div>
   );

@@ -9,11 +9,11 @@ export default function Home() {
 
 
   return (
-    <div className="w-screen bg-[#329194]">
+    <div className="w-screen W-FULL bg-[#329194]">
       <FloatingEffect />
       {/* <ComingSoon/> */}
       <Herosection/>
-      {/* <Timeline /> */}
+      <Timeline />
     </div>
   );
 }

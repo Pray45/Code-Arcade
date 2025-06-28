@@ -11,12 +11,14 @@ const poppins = Poppins({ subsets: ['latin'], weight: "400" });
 
 const Header = () => {
 
-    const [ isDiaplay, setisDiaplay ] = useState(false)
+    const [open, setOpen] = useState(false);
+    const menuItems = ['Home', 'Timeline', 'Instruction', 'Rewards', 'Sponsors', 'FAQs', 'About Us'];
+
 
   return (
     <div>
       
-      <header className="flex justify-center items-center h-auto px-4 py-2 bg-[#EBD6A7] text-[#053125]">
+      <header className="flex justify-center items-center h-auto px-4 py-2 bg-[#EBD6A7] text-[#053125] ">
         <div className="flex justify-center items-center lg:gap-3">
 
           {/* Left Navigation */}
@@ -55,39 +57,57 @@ const Header = () => {
             ))}
           </section>
 
-
-          <section className='lg:hidden '>
-            <img src="./ham.svg"  onClick={() => setisDiaplay(!isDiaplay)} className='w-8 absolute top-3 right-3 vs:top-4' alt="" />
-          </section>
+          <button onClick={() => setOpen(!open)} className="absolute w-8 h-8 z-51 right-3 top-3">
+            <motion.span
+              animate={open ? { rotate: 45, y: 6, backgroundColor:"#EBD6A7"  } : { rotate: 0, y: 0, backgroundColor:"#329194"  }}
+              className="absolute left-0 top-0 h-1 w-full bg-[#329194] rounded origin-left"
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span
+              animate={open ? { opacity: 0, backgroundColor:"#EBD6A7"  } : { opacity: 1, backgroundColor:"#329194" }}
+              className="absolute left-0 top-3.5 h-1 w-full bg-[#329194] rounded"
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span
+              animate={open ? { rotate: -45, y: 0, backgroundColor:"#EBD6A7"  } : { rotate: 0, y: 0, backgroundColor:"#329194" }}
+              className="absolute left-0 top-7 h-1 w-full bg-[#329194] rounded origin-left"
+              transition={{ duration: 0.3 }}
+            />
+          </button>
 
         </div>
       </header>
 
+    <div className="lg:hidden z-50">
+      {/* Hamburger / Close button */}
+
+      {/* Full-screen Menu */}
       <AnimatePresence>
-        {isDiaplay && (
+        {open && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="absolute right-3 top-15 z-40"
+            initial={{ y: '-100vh', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: '-100vh', opacity: 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className="fixed top-0 left-0 w-full h-screen bg-[#AF2012] flex flex-col justify-center items-center gap-6 z-50"
           >
-            <ul>
-              {["Timeline", "Instruction", "Rewards", "Sponsors", "FAQs", "About Us"].map((text, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  className={`${anton.className} text-center text-white py-3 px-10 bg-[#AF2012] my-3 rounded-md shadow-lg`}
-                >
-                  {text}
-                </motion.li>
-              ))}
-            </ul>
+            {menuItems.map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + index * 0.1, duration: 0.4 }}
+                className={`${anton.className} text-3xl text-white`}
+              >
+                {item}
+              </motion.div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
+
+
 
     </div>
   )
