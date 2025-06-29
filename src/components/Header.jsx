@@ -21,7 +21,7 @@ const Header = () => {
 
 
   return (
-    <div>
+    <div className="w-full">
       
       <header className="flex justify-center items-center h-auto px-4 py-2 bg-[#EBD6A7] text-[#053125] ">
         <div className="flex justify-center items-center lg:gap-3">
@@ -29,7 +29,7 @@ const Header = () => {
           {/* Left Navigation */}
           <section className={`${anton.className} vs:px-0 lg:px-10 2xl:px-15 gap-5 lg:gap-10 2xl:gap-20 hidden lg:flex lg:text-xl 2xl:text-3xl border-y-[3px] border-[#93A39A] py-1`}>
             {["Timeline", "Instruction", "Rewards"].map((text, index) => (
-              <div key={index} className="relative w-20 2xl:w-30 text-center group text-[#053125] hover:text-[#E72E0A] duration-200">
+              <div key={index} className="relative w-20 2xl:w-30 text-center group text-[#053125] hover:text-[#E72E0A] duration-200 cursor-pointer">
                 {text}
                 <span className="absolute left-0 -bottom-0.5 h-[3px] w-full origin-center scale-x-0 bg-[#E72E0A] transition-transform duration-300 group-hover:scale-x-100" />
               </div>
@@ -55,14 +55,16 @@ const Header = () => {
           {/* Right Navigation */}
           <section className={`${anton.className} vs:px-0 lg:px-10 2xl:px-15 gap-5 lg:gap-10 2xl:gap-20 hidden lg:flex lg:text-xl 2xl:text-3xl border-y-[3px] border-[#93A39A] py-1`}>
             {["Sponsors", "FAQs", "About Us"].map((text, index) => (
-              <div key={index} className="relative w-20 2xl:w-30 text-center group text-[#053125] hover:text-[#E72E0A] duration-200">
+              <div key={index} className="relative w-20 2xl:w-30 text-center group text-[#053125] hover:text-[#E72E0A] duration-200 cursor-pointer">
                 {text}
                 <span className="absolute left-0 -bottom-0.5 h-[3px] w-full origin-center scale-x-0 bg-[#E72E0A] transition-transform duration-300 group-hover:scale-x-100" />
               </div>
             ))}
           </section>
 
-          <button onClick={() => setOpen(!open)} className="absolute w-8 h-8 z-51 right-3 top-3">
+          <img src="devfolio cyan.svg" className="lg:hidden w-8 absolute left-3 top-3" alt="" />
+
+          <button onClick={() => setOpen(!open)} className="lg:hidden absolute w-8 h-8 z-51 right-3 top-3">
             <motion.span
               animate={open ? { rotate: 45, y: 6, backgroundColor:"#EBD6A7"  } : { rotate: 0, y: 0, backgroundColor:"#329194"  }}
               className="absolute left-0 top-0 h-1 w-full bg-[#329194] rounded origin-left"
@@ -111,8 +113,6 @@ const Header = () => {
         )}
       </AnimatePresence>
     </div>
-
-
 
     </div>
   )

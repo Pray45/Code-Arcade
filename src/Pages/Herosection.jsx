@@ -13,42 +13,42 @@ const Herosection = () => {
   
 
   return (
+    <div className="hidden min-h-screen w-full lg:flex flex-col justify-between">
 
-    <>
+      <Header />
 
-    {/* Mobile diaplay................................................. */}
-
-     <div className="relative lg:hidden overflow-hidden min-h-screen max-h-screen flex flex-col justify-between">
-      <Header/>
-
-      <img className="absolute top-15 self-center" src="mobilebg.svg" alt="" />
-
-      <div className="w-full">
-
-        <div className="z-0"></div>
-
-        <div className="z-1 flex flex-col justify-center items-center ">
-          <h1 className={`${anton.className} text-[#BA1E00] z-10 text-[10rem] leading-none drop-shadow-[2px_4px_4px_rgba(0,0,0,0.5)]`}>CODE</h1>
-          <h1 className={`${anton.className} text-[#BA1E00] z-10 text-8xl drop-shadow-[2px_4px_4px_rgba(0,0,0,0.5)]`}>ARCADE</h1>
-          <h1 className={`${anton.className} text-[#EE9B01] z-10 text-6xl drop-shadow-[2px_4px_4px_rgba(0,0,0,0.5)]`}>HACKATHON</h1>
+      <div className="mb-20 2xl:mb-30 ">
+        <div className="flex w-full justify-around items-center">
+          <div>
+            <h1 className={`text-6xl xl:text-9xl 2xl:text-[200px] ${anton.className} text-[#E72E0A] text-shadow-retro-red `} >CODE</h1>
+            <h1 className={`text-6xl xl:text-9xl 2xl:text-[200px] ${anton.className} text-[#E72E0A] text-shadow-retro-red `} >ARCADE</h1>
+            <h1 className={`text-6xl xl:text-9xl 2xl:text-[200px] ${anton.className} text-[#EE9B01] text-shadow-retro-yellow `} >HACKATHON</h1>
+            <p className={`${poppins.className} text-white w-80 text-xs 2xl:text-2xl 2xl:w-220 xl:w-140 pl-2 mt-5`}>A thrilling state-level hackathon bringing together bright minds to innovate, collaborate, and build impactful tech solutions in a high-energy, competitive environment.</p>
+            <div className="flex w-full  justify-around 2xl:mt-30  mt-10">
+                <div className={`${anton.className} cursor-pointer btn-shadow-red gap-2 flex 2xl:text-3xl 2xl:px-15 2xl:py-4 px-5 py-2 text-white bg-[#AF2012] `}>Register Now<img src="devfolio.svg" className="w-5"/></div>
+                <div className={`${anton.className} cursor-pointer btn-shadow-yellow 2xl:text-3xl 2xl:px-15 2xl:py-4 px-7 py-2 text-black bg-[#EBD6A7] `}>Read More</div>
+            </div>
+          </div>
+          <div>
+            <img src="trophy.svg" className="mt-10 w-100 xl:w-150 2xl:w-280" alt="" />
+          </div>
         </div>
-
       </div>
 
-      <div className="flex flex-col w-full items-center">
-        <p className={`${poppins.className} text-white text-xs max-w-3xl z-10 mt-10 mx-12 vs:text-center text-center vvs:text-left vs:text-xl`} >A thrilling state-level hackathon bringing together bright minds to innovate, collaborate, and build impactful tech solutions in a high-energy, competitive environment.</p>
+      <div className="absolute bottom-8 2xl:bottom-10 2xl:py-4 2xl:text-5xl left-0 -rotate-3 w-full overflow-hidden bg-[#EE9B01] py-1">
+        <div className="marquee">
+          <div className="flex whitespace-nowrap text-2xl text-[#AF2012]">
+            <span className={`${anton.className}`}>
+              ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack
+            </span>
+            <span className={`${anton.className}`}>
+              ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack ·  Insert brain. press start. hack
+            </span>
+          </div>
+        </div>
       </div>
-
-      <div className="flex w-full justify-around">
-          <div className={`${anton.className} btn-shadow-red gap-2 flex px-7 py-2 text-white bg-[#AF2012] `}>Register Now<img src="devfolio.svg" className="w-5"/></div>
-          <div className={`${anton.className} btn-shadow-yellow  px-10 py-2 text-black bg-[#EBD6A7] `}>Read More</div>
-      </div>
-
-      <footer className={`${anton.className} text-[#AF2012] w-full h-10 bg-[#EE9B01] text-center pt-2`}>Insert Brain. Press Start. Hack.</footer>
 
     </div>
-
-    </>
   );
 };
 

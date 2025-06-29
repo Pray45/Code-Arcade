@@ -7,10 +7,12 @@ module.exports = {
       fontFamily: {
         anton: ['var(--font-anton)', 'sans-serif'],
       },
-      fontSize: {
-        '10xl': '10rem',   // 160px
-        '11xl': '12rem',   // 192px
-        '12xl': '14rem',   // 224px
+      screens: {
+        'vvs': '365px',
+        'vs': '450px',
+        'xs': '480px',
+        '3xl': '1920px',
+        '4xl': '2560px',
       },
        fontSize: {
         '10xl': '10rem',
